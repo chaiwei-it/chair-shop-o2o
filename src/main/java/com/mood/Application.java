@@ -1,4 +1,4 @@
-package com.mood.comment;
+package com.mood;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
