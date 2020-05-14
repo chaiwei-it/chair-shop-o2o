@@ -1,0 +1,45 @@
+server:
+  port: 9001
+  tomcat:
+    #最大连接数
+    max-connections: 2000
+    #tomcat起动的最大线程数，即同时处理的任务个数
+    max-threads: 2000
+    #当tomcat起动的线程数达到最大时，接受排队的请求个数，和max-threads一致
+    accept-count: 2000
+    #最小空闲线程
+    min-spare-threads: 0
+    #后台线程方法的Delay大小:
+    background-processor-delay: 30
+  connection-timeout: 10000
+
+spring:
+  application:
+    name: chair
+  datasource:
+    url: jdbc:mysql://127.0.0.1:3306/chair_content?characterEncoding=utf8
+    username: root
+    password: 123456
+    # 使用druid数据源
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.jdbc.Driver
+    filters: stat
+    maxActive: 20
+    initialSize: 1
+    maxWait: 60000
+    minIdle: 1
+    timeBetweenEvictionRunsMillis: 60000
+    minEvictableIdleTimeMillis: 300000
+    validationQuery: select 'x'
+    testWhileIdle: true
+    testOnBorrow: false
+    testOnReturn: false
+    poolPreparedStatements: true
+    maxOpenPreparedStatements: 20
+  jpa:
+    showSql: true
+    hibernate:
+      ddl-auto: update
+logging:
+  level:
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
