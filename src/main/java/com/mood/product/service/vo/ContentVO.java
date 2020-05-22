@@ -1,10 +1,6 @@
-package com.mood.comment.controller.vo;
+package com.mood.product.service.vo;
 
 import lombok.Data;
-
-import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Date;
 
 @Data
 public class ContentVO {

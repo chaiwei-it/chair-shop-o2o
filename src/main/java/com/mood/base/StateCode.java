@@ -1,7 +1,9 @@
 package com.mood.base;
 
 /**
- * Created by shihan on 2020/1/8.
+ * 应用模块
+ * @author chaiwei
+ * @time 2018-06-04 下午16:00
  */
 public enum StateCode {
 
@@ -13,6 +15,16 @@ public enum StateCode {
 
     COMMON_PARAM_EMPTY(2, "必选参数为空"),
 
+    /**
+     * 用于登录时用户不存在的情况
+     */
+    USER_NOT_EXISTS(42003, "用户不存在, 请先注册"),
+
+    /**
+     * 凭证错误
+     */
+    INVALID_CREDENTIAL(42004, "用户名或密码错误"),
+
 
 
 
@@ -22,24 +34,24 @@ public enum StateCode {
     ;
 
     private int code;
-    private String desc;
+    private String message;
 
-    StateCode(int code, String desc) {
+    StateCode(int code, String message) {
         this.code = code;
-        this.desc = desc;
+        this.message = message;
     }
 
     public int getCode() {
         return this.code;
     }
 
-    public String getDesc() {
-        return desc;
+    public String getMessage() {
+        return message;
     }
 
     @Override
     public String toString() {
-        return "StateCodeEnum{" + "code='" + code + '\'' + ", desc='" + desc + '\'' + '}';
+        return "StateCodeEnum{" + "code='" + code + '\'' + ", message='" + message + '\'' + '}';
     }
 
 }

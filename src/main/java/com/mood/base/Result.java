@@ -1,7 +1,9 @@
 package com.mood.base;
 
 /**
- * Created by shihan on 2020/2/17.
+ * 应用模块
+ * @author chaiwei
+ * @time 2018-06-04 下午16:00
  */
 public class Result {
 
@@ -10,10 +12,10 @@ public class Result {
      * @param stateCode 响应信息
      * @return
      */
-    public static  <T> BaseVO Result(StateCode stateCode) {
+    public static  <T> BaseVO result(StateCode stateCode) {
         BaseVO baseVO = new BaseVO();
         baseVO.setStateCode(stateCode.getCode());
-        baseVO.setMsg(stateCode.getDesc());
+        baseVO.setMsg(stateCode.getMessage());
         return baseVO;
     }
 
@@ -23,25 +25,50 @@ public class Result {
      * @param stateCode 响应信息
      * @return
      */
-    public static  <T> BaseVO Result(StateCode stateCode,T t) {
+    public static  <T> BaseVO result(StateCode stateCode, T t) {
         BaseVO baseVO = new BaseVO();
         baseVO.setStateCode(stateCode.getCode());
-        baseVO.setMsg(stateCode.getDesc());
+        baseVO.setMsg(stateCode.getMessage());
         baseVO.setData(t);
         return baseVO;
     }
 
     /**
-     * 因为服务异常响应 失败
-     * @param stateCode 响应信息
+     * 成功
+     * @param
      * @return
      */
-    public static  <T> BaseVO Result(T t) {
+    public static  <T> BaseVO success(T t) {
         BaseVO baseVO = new BaseVO();
         baseVO.setStateCode(StateCode.SUCCESS.getCode());
-        baseVO.setMsg(StateCode.SUCCESS.getDesc());
+        baseVO.setMsg(StateCode.SUCCESS.getMessage());
         baseVO.setData(t);
         return baseVO;
     }
+
+    /**
+     * 成功
+     * @param
+     * @return
+     */
+    public static  <T> BaseVO success() {
+        BaseVO baseVO = new BaseVO();
+        baseVO.setStateCode(StateCode.SUCCESS.getCode());
+        baseVO.setMsg(StateCode.SUCCESS.getMessage());
+        return baseVO;
+    }
+
+    /**
+     * 因为服务异常响应 失败
+     * @param stateCode
+     * @return
+     */
+    public static  <T> BaseVO error(StateCode stateCode) {
+        BaseVO baseVO = new BaseVO();
+        baseVO.setStateCode(stateCode.getCode());
+        baseVO.setMsg(stateCode.getMessage());
+        return baseVO;
+    }
+
 
 }

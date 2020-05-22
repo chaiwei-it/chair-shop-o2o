@@ -1,4 +1,4 @@
-package com.mood.comment.service.command;
+package com.mood.product.service.command;
 
 import lombok.Data;
 

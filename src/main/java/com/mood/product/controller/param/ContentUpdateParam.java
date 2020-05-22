@@ -1,4 +1,4 @@
-package com.mood.comment.controller.param;
+package com.mood.product.controller.param;
 
 import lombok.Data;
 

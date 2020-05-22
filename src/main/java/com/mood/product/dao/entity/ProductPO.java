@@ -1,4 +1,4 @@
-package com.mood.comment.dao.entity;
+package com.mood.product.dao.entity;
 
 import lombok.Data;
 
@@ -9,7 +9,7 @@ import java.util.Date;
 @Data
 @Entity
 @Table(name = "char_content")
-public class ContentPO implements Serializable {
+public class ProductPO implements Serializable {
 
     @GeneratedValue(strategy= GenerationType.IDENTITY)
     @Id

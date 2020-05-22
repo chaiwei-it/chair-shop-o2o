@@ -1,32 +1,29 @@
-package com.mood.comment.controller;
+package com.mood.product.controller.admin;
 
 
 import com.mood.base.BaseVO;
-import com.mood.comment.controller.param.ContentUpdateParam;
-import com.mood.comment.controller.vo.ContentVO;
-import com.mood.comment.dao.entity.ContentPO;
-import com.mood.comment.service.ContentService;
-import com.mood.comment.service.command.ContentCreateCommand;
+import com.mood.product.controller.param.ContentUpdateParam;
+import com.mood.product.dao.entity.ProductPO;
+import com.mood.product.service.ContentService;
+import com.mood.product.service.command.ContentCreateCommand;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @RestController
 @RequestMapping("/content")
-public class ContentController {
+public class ProductController {
 
     @Autowired
     private ContentService contentService;
 
     @PostMapping("")
-    public ContentPO add(@RequestBody ContentPO contentPO) {
+    public ProductPO add(@RequestBody ProductPO contentPO) {
         return contentService.add(contentPO);
     }
 
     @PutMapping("/{id}")
-    public ContentPO update(@PathVariable(value = "id", required = false) int id,
+    public ProductPO update(@PathVariable(value = "id", required = false) int id,
                             @RequestBody ContentUpdateParam contentUpdateParam) {
         ContentCreateCommand contentCreateCommand = new ContentCreateCommand();
         BeanUtils.copyProperties(contentUpdateParam, contentCreateCommand);
@@ -35,7 +32,7 @@ public class ContentController {
     }
 
     @GetMapping("/{id}")
-    public ContentPO get(@PathVariable(value = "id", required = false) int id) {
+    public ProductPO get(@PathVariable(value = "id", required = false) int id) {
         return contentService.get(id);
     }
 

@@ -40,6 +40,11 @@ spring:
     showSql: true
     hibernate:
       ddl-auto: update
+  redis:
+    host: 120.77.3.111
+    port: 6379
+    timeout: 0
+
 logging:
   level:
     org.hibernate.type.descriptor.sql.BasicBinder: trace
