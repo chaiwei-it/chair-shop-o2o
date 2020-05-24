@@ -167,8 +167,8 @@ public class AdminServiceImpl implements AdminService {
         return null;
     }
 
-//    private String digestWithSalt(String content, String key) {
-//        String result = content;
+//    private String digestWithSalt(String constant, String key) {
+//        String result = constant;
 //        for (int i = 0; i < 5; i++) {
 //            result = DigestUtils.sha256Hex(result + key);
 //        }
