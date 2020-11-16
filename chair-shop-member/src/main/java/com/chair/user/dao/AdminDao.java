@@ -1,6 +1,6 @@
 package com.chair.user.dao;
 
-import com.mood.user.dao.entity.AdminPO;
+import com.chair.user.dao.entity.AdminPO;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Component;
 

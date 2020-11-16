@@ -1,6 +1,6 @@
 package com.chair.user.service.vo;
 
-import com.mood.base.BaseEntity;
+import com.chair.base.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.Id;

@@ -1,4 +1,4 @@
-package com.chair.config;//package com.mood.config;
+package com.chair.config;
 //
 //import com.fasterxml.jackson.annotation.JsonAutoDetect;
 //import com.fasterxml.jackson.annotation.PropertyAccessor;

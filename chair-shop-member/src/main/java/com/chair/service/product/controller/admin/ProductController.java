@@ -1,11 +1,11 @@
 package com.chair.service.product.controller.admin;
 
 
-import com.mood.base.BaseVO;
-import com.mood.service.product.controller.param.ContentUpdateParam;
-import com.mood.service.product.dao.entity.ProductPO;
-import com.mood.service.product.service.ContentService;
-import com.mood.service.product.service.command.ContentCreateCommand;
+import com.chair.base.BaseVO;
+import com.chair.service.product.controller.param.ContentUpdateParam;
+import com.chair.service.product.dao.entity.ProductPO;
+import com.chair.service.product.service.ContentService;
+import com.chair.service.product.service.command.ContentCreateCommand;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

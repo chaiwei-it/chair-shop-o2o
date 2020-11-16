@@ -1,8 +1,8 @@
 package com.chair.base;
 
 
-import com.mood.constant.OauthContants;
-import com.mood.user.service.vo.AdminVO;
+import com.chair.constant.OauthContants;
+import com.chair.user.service.vo.AdminVO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Controller;

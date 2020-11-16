@@ -1,15 +1,15 @@
 package com.chair.user.controller;
 
-import com.mood.annotation.LoginRequired;
-import com.mood.base.BaseController;
-import com.mood.base.BaseVO;
-import com.mood.user.controller.notes.LoginNote;
-import com.mood.user.controller.param.LoginParam;
-import com.mood.user.service.AdminService;
-import com.mood.user.service.command.LoginCommand;
-import com.mood.user.service.vo.AdminInfo;
-import com.mood.user.service.vo.AdminVO;
-import com.mood.utils.OrikaMapper;
+import com.chair.annotation.LoginRequired;
+import com.chair.base.BaseController;
+import com.chair.base.BaseVO;
+import com.chair.user.controller.notes.LoginNote;
+import com.chair.user.controller.param.LoginParam;
+import com.chair.user.service.AdminService;
+import com.chair.user.service.command.LoginCommand;
+import com.chair.user.service.vo.AdminInfo;
+import com.chair.user.service.vo.AdminVO;
+import com.chair.utils.OrikaMapper;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

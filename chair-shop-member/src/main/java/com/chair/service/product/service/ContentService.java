@@ -1,9 +1,9 @@
 package com.chair.service.product.service;
 
 
-import com.mood.base.BaseVO;
-import com.mood.service.product.dao.entity.ProductPO;
-import com.mood.service.product.service.command.ContentCreateCommand;
+import com.chair.base.BaseVO;
+import com.chair.service.product.dao.entity.ProductPO;
+import com.chair.service.product.service.command.ContentCreateCommand;
 
 public interface ContentService{
 

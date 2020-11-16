@@ -1,6 +1,6 @@
 package com.chair.user.dao.entity;
 
-import com.mood.base.BaseEntity;
+import com.chair.base.BaseEntity;
 import lombok.Data;
 
 import javax.persistence.Entity;

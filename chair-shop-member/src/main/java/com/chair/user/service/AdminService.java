@@ -1,8 +1,8 @@
 package com.chair.user.service;
 
-import com.mood.base.BaseVO;
-import com.mood.user.service.command.LoginCommand;
-import com.mood.user.service.vo.AdminVO;
+import com.chair.base.BaseVO;
+import com.chair.user.service.command.LoginCommand;
+import com.chair.user.service.vo.AdminVO;
 
 /**
  * 应用模块
