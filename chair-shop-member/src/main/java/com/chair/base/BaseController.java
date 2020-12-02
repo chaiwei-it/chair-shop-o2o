@@ -17,13 +17,13 @@ public class BaseController {
 	private RedisTemplate redisTemplate;
 
 
-	public static final String project_id = "640FAAA324A25C3AE41B9D9A6658DAD2";
+//	public static final String project_id = "640FAAA324A25C3AE41B9D9A6658DAD2";
 
-	public static final String role_admin_name = "ROLE_ADMIN";
+//	public static final String role_admin_name = "ROLE_ADMIN";
 
 	public AdminVO getLoginUser(HttpServletRequest request) {
-		String access_token = request.getHeader("x-access-token");
-		AdminVO admin = (AdminVO)redisTemplate.opsForValue().get(OauthContants.ACCESS_TOKEN + access_token);
+		String accessToken = request.getHeader("x-access-token");
+		AdminVO admin = (AdminVO)redisTemplate.opsForValue().get(OauthContants.ACCESS_TOKEN + accessToken);
 		return admin;
 	}
 

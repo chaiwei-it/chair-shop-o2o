@@ -6,13 +6,21 @@ package com.chair.base;
  * @time 2018-06-04 下午16:00
  */
 public enum StateCode {
-
+    /**
+     * 用于登录时用户不存在的情况
+     */
     SUCCESS(200, "success"),
-
+    /**
+     * 用于登录时用户不存在的情况
+     */
     COMMON_ACCOUNT_ERROR(401, "账号未登陆"),
-
+    /**
+     * 用于登录时用户不存在的情况
+     */
     SYSTEM_UNKNOWN_ERROR(1, "系统繁忙，请稍后再试...."),
-
+    /**
+     * 用于登录时用户不存在的情况
+     */
     COMMON_PARAM_EMPTY(2, "必选参数为空"),
 
     /**

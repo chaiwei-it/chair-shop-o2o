@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class BaseVO<T> {
 
-    private int stateCode;
+    private Integer stateCode;
 
     private String msg;
 

@@ -1,0 +1,6 @@
+#此配置只用于设置启动应用默认环境。
+#如有其他配置，根据情况添加到相应的dev/qa/prod配置文件或configserver中
+spring:
+  profiles:
+    active: dev
+

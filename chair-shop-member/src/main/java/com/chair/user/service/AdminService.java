@@ -19,6 +19,12 @@ public interface AdminService {
 //
 //    public Admin select(Admin request);
 //
+    /**
+     * XXX class function description.
+     *
+     * @param id rule id
+     * @return AdminVO
+     */
     public AdminVO selectById(Integer id);
 //
 //    public Admin selectList(Admin request);

@@ -1,10 +1,16 @@
 package com.chair.constant;
 
+/**
+ * 模块
+ *
+ * @author chaiwei
+ * @time 2020-11-18 10:00
+ */
 public class OauthContants {
 
-	public static final String CLIENTID = "123456";//"40D429CEB3780CD317ED760043909F0C";//upp(md5("ART1001-ALADDIN-CLIENTID"))
+	public static final String CLIENTID = "123456";
 
-	public static final String CLIENTKEY = "abcdef";//E56D97424ABC916EEBBE6498E04A3CC9//ART1001-ALADDIN-CLIENTKEY
+	public static final String CLIENTKEY = "abcdef";
 
 	
 //	public static final String CLIENTID = "40D429CEB3780CD317ED760043909F0C";//upp(md5("ART1001-ALADDIN-CLIENTID"))

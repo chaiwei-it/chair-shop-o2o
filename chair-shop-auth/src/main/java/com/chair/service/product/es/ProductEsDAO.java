@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 
 
 @Component
-public interface ProductESDAO extends JpaRepository<ProductPO,Integer> {
+public interface ProductEsDAO extends JpaRepository<ProductPO,Integer> {
 
 }

@@ -9,7 +9,7 @@ import org.springframework.data.elasticsearch.annotations.FieldType;
 import java.util.List;
 
 @Data
-@Document(indexName = "product",type = "docs", shards = 30, replicas = 0)
+@Document(indexName = "product", shards = 30, replicas = 0)
 public class ProductDO {
 
     @Id

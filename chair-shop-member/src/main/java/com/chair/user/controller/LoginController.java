@@ -12,8 +12,6 @@ import com.chair.user.service.vo.AdminVO;
 import com.chair.utils.OrikaMapper;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -26,29 +24,29 @@ import javax.validation.Valid;
  * 模块
  *
  * @author chaiwei
- * @time 2018-06-07 17:21
+ * @time 2020-11-18 10:00
  */
 @RestController
-@RequestMapping(value = "/api/v1",produces = {MediaType.APPLICATION_JSON_UTF8_VALUE}, consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+@RequestMapping(value = "/api/v1")
 public class LoginController extends BaseController{
 
     @Autowired
     private AdminService adminService;
 
-    @ApiOperation(value = LoginNote.title, notes = LoginNote.notes)
+    @ApiOperation(value = LoginNote.TITLE, notes = LoginNote.NOTES)
     @PostMapping("login")
     public BaseVO create(@Valid @RequestBody LoginParam request){
         return adminService.login(OrikaMapper.map(request, LoginCommand.class));
     }
 
-//    @ApiOperation(value = LoginNote.title, notes = LoginNote.notes)
-//    @PostMapping("info")
-//    @LoginRequired
-//    public AdminInfo info(HttpServletRequest request
-//                          ){
-//        Integer adminId = getUserId(request);
-//        AdminVO adminVO = adminService.selectById(adminId);
-//        return OrikaMapper.map(adminVO, AdminInfo.class);
-//    }
+    @ApiOperation(value = LoginNote.TITLE, notes = LoginNote.NOTES)
+    @PostMapping("info")
+    @LoginRequired
+    public AdminInfo info(HttpServletRequest request
+                          ){
+        Integer adminId = getUserId(request);
+        AdminVO adminVO = adminService.selectById(adminId);
+        return OrikaMapper.map(adminVO, AdminInfo.class);
+    }
 
 }

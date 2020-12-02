@@ -1,5 +1,5 @@
 server:
-  port: 9001
+  port: 9100
   tomcat:
     #最大连接数
     max-connections: 2000
@@ -15,7 +15,7 @@ server:
 
 spring:
   application:
-    name: chair
+    name: chair-shop-member
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/chair_content?characterEncoding=utf8
     username: root
@@ -44,6 +44,14 @@ spring:
     host: 120.77.3.111
     port: 6379
     timeout: 0
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:9000/eureka/
+      # defaultZone: ${service_springcloud_eureka}
+    #    fetch-registry: false
+#    register-with-eureka: true
 
 logging:
   level:

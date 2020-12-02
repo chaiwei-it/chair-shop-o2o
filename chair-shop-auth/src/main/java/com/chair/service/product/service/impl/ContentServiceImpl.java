@@ -29,31 +29,31 @@ public class ContentServiceImpl implements ContentService {
 
 
     @Override
-    public ProductPO add(ProductPO contentPO) {
-        contentPO.setCreateTime(new Date());
-        return productDAO.save(contentPO);
+    public ProductPO add(ProductPO contentPo) {
+        contentPo.setCreateTime(new Date());
+        return productDAO.save(contentPo);
     }
 
     @Override
     public ProductPO update(ContentCreateCommand contentCreateCommand) {
-        Optional<ProductPO> contentPOOptional = productDAO.findById(contentCreateCommand.getId());
-        ProductPO contentPO = contentPOOptional.get();
-        BeanUtils.copyProperties(contentCreateCommand, contentPO);
-        return productDAO.save(contentPO);
+        Optional<ProductPO> contentPoOptional = productDAO.findById(contentCreateCommand.getId());
+        ProductPO contentPo = contentPoOptional.get();
+        BeanUtils.copyProperties(contentCreateCommand, contentPo);
+        return productDAO.save(contentPo);
     }
 
     @Override
     public ProductPO get(int id) {
-        Optional<ProductPO> contentPOOptional = productDAO.findById(id);
-        ProductPO contentPO = contentPOOptional.get();
-        return contentPO;
+        Optional<ProductPO> contentPoOptional = productDAO.findById(id);
+        ProductPO contentPo = contentPoOptional.get();
+        return contentPo;
     }
 
     @Override
     public BaseVO findAll() {
-        List<ProductPO> contentPOList = productDAO.findAll();
+        List<ProductPO> contentPoList = productDAO.findAll();
         List<ContentVO> contentVOList = new ArrayList<>();
-        contentPOList.forEach(contentPO -> contentVOList.add(copy(contentPO)));
+        contentPoList.forEach(contentPo -> contentVOList.add(copy(contentPo)));
         return Result.success(contentVOList);
     }
 
@@ -62,10 +62,10 @@ public class ContentServiceImpl implements ContentService {
         productDAO.deleteById(id);
     }
 
-    private ContentVO copy(ProductPO contentPO){
+    private ContentVO copy(ProductPO contentPo){
         ContentVO contentVO = new ContentVO();
-        BeanUtils.copyProperties(contentPO, contentVO);
-        contentVO.setCreateTime(DateUtil.convertDateToString(contentPO.getCreateTime()));
+        BeanUtils.copyProperties(contentPo, contentVO);
+        contentVO.setCreateTime(DateUtil.convertDateToString(contentPo.getCreateTime()));
         return contentVO;
     }
 }

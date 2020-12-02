@@ -7,7 +7,7 @@ package com.chair.user.controller.notes;
  */
 public class LoginNote {
 
-    public static final String title = "登录接口";
+    public static final String TITLE = "登录接口";
 
-    public static final String notes = "登录功能";
+    public static final String NOTES = "登录功能";
 }

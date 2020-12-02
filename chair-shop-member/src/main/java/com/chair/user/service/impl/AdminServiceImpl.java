@@ -11,7 +11,7 @@ import com.chair.user.service.command.LoginCommand;
 import com.chair.user.service.vo.AdminInfo;
 import com.chair.user.service.vo.AdminVO;
 import com.chair.user.service.vo.LoginVO;
-import com.chair.utils.DESUtil;
+import com.chair.utils.DesUtil;
 import com.chair.utils.OrikaMapper;
 import org.apache.commons.codec.digest.DigestUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -135,16 +135,18 @@ public class AdminServiceImpl implements AdminService {
             return Result.error(StateCode.INVALID_CREDENTIAL);
         }
         String tokenStr = adminVO.getId() + ":" + System.currentTimeMillis();
-        String token  = DESUtil.encrypt(tokenStr);
+        String token  = DesUtil.encrypt(tokenStr);
         LoginVO loginVO = new LoginVO();
         loginVO.setToken(token);
         loginVO.setAdminInfo(OrikaMapper.map(adminVO, AdminInfo.class));
         return Result.success(loginVO);
     }
 
+    private static Integer FIVE = 5;
+
     private String digestWithSalt(String content, String key) {
         String result = content;
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < FIVE; i++) {
             result = DigestUtils.sha256Hex(result + key);
         }
         return result;

@@ -18,8 +18,8 @@ public class ProductController {
     private ContentService contentService;
 
     @PostMapping("")
-    public ProductPO add(@RequestBody ProductPO contentPO) {
-        return contentService.add(contentPO);
+    public ProductPO add(@RequestBody ProductPO contentPo) {
+        return contentService.add(contentPo);
     }
 
     @PutMapping("/{id}")

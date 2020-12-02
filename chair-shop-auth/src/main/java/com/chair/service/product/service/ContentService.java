@@ -7,7 +7,7 @@ import com.chair.service.product.service.command.ContentCreateCommand;
 
 public interface ContentService{
 
-    ProductPO add(ProductPO contentPO);
+    ProductPO add(ProductPO contentPo);
 
     ProductPO update(ContentCreateCommand contentCreateCommand);
 

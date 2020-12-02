@@ -9,7 +9,7 @@ import javax.crypto.spec.DESKeySpec;
 import java.security.SecureRandom;
 
 
-public class DESUtil {
+public class DesUtil {
 
     private static final String DEFAULT_KEY = "CCC47AB111FD437F962AF80026796655";
     private static final String CIPHER_INSTANCE = "DES/ECB/PKCS5Padding";
@@ -47,7 +47,7 @@ public class DESUtil {
 
     public static String encrypt(String datasource) {
         try {
-            return new String(encryptBASE64(encryptBytes(datasource.getBytes(ENCODING), DEFAULT_KEY)));
+            return new String(encryptBase64(encryptBytes(datasource.getBytes(ENCODING), DEFAULT_KEY)));
         } catch (Exception e) {
         }
         return null;
@@ -55,7 +55,7 @@ public class DESUtil {
 
     public static String decrypt(String datasource) {
         try {
-            return new String(decryptBytes(decryptBASE64(datasource), DEFAULT_KEY));
+            return new String(decryptBytes(decryptBase64(datasource), DEFAULT_KEY));
         } catch (Exception e) {
         }
         return null;
@@ -67,7 +67,7 @@ public class DESUtil {
      * @param key
      * @return
      */
-    public static byte[] decryptBASE64(String key){
+    public static byte[] decryptBase64(String key){
         return new Base64().decode(key);
     }
 
@@ -77,7 +77,7 @@ public class DESUtil {
      * @param key
      * @return
      */
-    public static byte[] encryptBASE64(byte[] key){
+    public static byte[] encryptBase64(byte[] key){
         return new Base64().encode(key);
     }
 
